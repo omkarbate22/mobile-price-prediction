@@ -1,0 +1,96 @@
+/* Background with mobile-related image */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: url('https://images.unsplash.com/photo-1511707171634-5f897ff02aa9') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Container with glass effect */
+.container {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 25px rgba(0,0,0,0.3);
+    width: 370px;
+    backdrop-filter: blur(8px);
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Heading with gradient */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #ff6b6b, #5f27cd);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 1.8em;
+    animation: slideDown 1s ease-in-out;
+}
+
+/* Form labels */
+label {
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+    color: #333;
+}
+
+/* Input fields */
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    transition: all 0.3s ease;
+}
+
+input:focus, select:focus {
+    border-color: #5f27cd;
+    box-shadow: 0px 0px 8px rgba(95, 39, 205, 0.5);
+    outline: none;
+}
+
+/* Predict button with animation */
+button {
+    background: linear-gradient(90deg, #ff6b6b, #5f27cd);
+    color: white;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(95, 39, 205, 0.5);
+}
+
+/* Result text */
+#result {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 18px;
+    color: #2c3e50;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Keyframe animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
